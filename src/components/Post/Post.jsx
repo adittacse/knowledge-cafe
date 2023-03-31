@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Post.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import {getTotalReadTime} from "../../utilities/LocalStorage.jsx";
 
 const readTime = (id, time) => {
     let totalTime = getTotalReadTime();
@@ -17,18 +18,10 @@ const readTime = (id, time) => {
     localStorage.setItem('read-time', JSON.stringify(totalTime));
 }
 
-const getTotalReadTime = () => {
-    let time = {};
-    const getTime = localStorage.getItem('read-time');
-    if (getTime) {
-        time = JSON.parse(getTime);
-    }
-
-    return time;
-}
-
 const Post = (props) => {
     const {id, coverImage, authorImage, authorName, blogDate, blogReadTime, blogTitle, tags} = props.posts;
+    const handleTime = props.handleTime;
+
     return (
         <div className="post-container">
             <img className="cover-image" src={coverImage} alt="..."/>
@@ -42,7 +35,8 @@ const Post = (props) => {
             </div>
             <h2>{blogTitle}</h2>
             <p>#{tags[0]} #{tags[1]}</p>
-            <a href="#" onClick={() => readTime(id, blogReadTime)}>Mark as read</a>
+            {/*<a href="#" onClick={() => {readTime(id, blogReadTime); handleTime(blogReadTime)}}>Mark as read</a>*/}
+            <a href="#" onClick={() => {readTime(id, blogReadTime), handleTime()}}>Mark as read</a>
             <hr/>
         </div>
     );
