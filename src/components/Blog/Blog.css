@@ -1,9 +1,6 @@
 .blog {
-    /*min-width: 100%;*/
-    /*padding: 0 100px;*/
-    /*margin: 0 auto;*/
     display: grid;
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 3fr 2fr;
     grid-gap: 24px;
     padding-left: 220px;
     padding-right: 220px;
@@ -33,11 +30,9 @@
 }
 
 .bookmarked-blogs {
-    margin-top: 0;
     margin-bottom: 0;
     padding-top: 30px;
-
-    text-align: center;
+    padding-left: 30px;
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;

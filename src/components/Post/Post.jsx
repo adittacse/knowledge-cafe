@@ -45,16 +45,15 @@ const Post = (props) => {
                     <h4>{authorName}</h4>
                     <p>{blogDate}</p>
                 </div>
-
                 <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={notify} icon={faBookmark} /></p>
                 <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false}
                                 newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss
                                 draggable pauseOnHover theme="colored"></ToastContainer>
             </div>
-            <h2>{blogTitle}</h2>
+            <h2 className="blog-tile">{blogTitle}</h2>
             <p>#{tags[0]} #{tags[1]}</p>
             <a href="#" onClick={() => {readTime(id, blogReadTime), handleTime()}}>Mark as read</a>
-            <hr/>
+            <hr className="horizontal-line"/>
         </div>
     );
 };

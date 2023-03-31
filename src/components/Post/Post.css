@@ -1,4 +1,5 @@
 .post-container {
+    margin-top: 32px;
     margin-bottom: 40px;
 }
 
@@ -8,7 +9,6 @@
 }
 
 .about-author {
-    border: 2px solid red;
     /*display: flex;*/
     align-items: center;
     display: grid;
@@ -23,14 +23,45 @@
 }
 
 .author-info {
-    border: 2px solid purple;
+    margin-top: 24px;
+}
+
+.author-info h4 {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.author-info p {
+    margin-top: 0;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(17, 17, 17, 0.6);
 }
 
 .about-author .blog-read-time {
     float: end;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.6);
 }
 
-.post-container a {
+.blog-title {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    color: #111111;
+}
+
+.post-container .horizontal-line {
     margin-top: 22px;
     margin-bottom: 38px;
 }
