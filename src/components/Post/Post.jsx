@@ -62,7 +62,6 @@ const Post = (props) => {
     const handleTime = props.handleTime;
     const handlePostCount = props.handlePostCount;
 
-
     return (
         <div className="post-container">
             <img className="cover-image" src={coverImage} alt="..."/>
@@ -72,7 +71,7 @@ const Post = (props) => {
                     <h4>{authorName}</h4>
                     <p>{blogDate}</p>
                 </div>
-                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={() => {readTitle(id, blogTitle), handlePostCount}} icon={faBookmark} /></p>
+                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={() => {readTitle(id, blogTitle), handlePostCount()}} icon={faBookmark} /></p>
                 <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false}
                                 newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss
                                 draggable pauseOnHover theme="colored"></ToastContainer>

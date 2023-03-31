@@ -45,6 +45,10 @@ const Blog = () => {
         getTotalPost();
     }, [totalPost]);
 
+    const handlePostCount = () => {
+        getTotalPost();
+    }
+
     const getReadTime = () => {
         // Get the "read-time" values from local storage
         const readTimes = JSON.parse(localStorage.getItem('read-time')) || [];
@@ -62,12 +66,6 @@ const Blog = () => {
 
     const handleTime = () => {
         getReadTime();
-    }
-    // const [totalPost, setTotalPost] = useState(0);
-    const handlePostCount = (newPost) => {
-        console.log(newPost);
-        totalPost += newPost;
-        setTotalPost(totalPost);
     }
 
     const [postTitle, setPostTitle] = useState([]);
@@ -91,8 +89,7 @@ const Blog = () => {
             <div className="sidebar">
                 <h2 className="time">Spent time on read: {readTime} min</h2>
                 <div className="bookmarked-container">
-                    {/*<h2 className="bookmarked-blogs">Bookmarked Blogs: {totalPost.length-1}</h2>*/}
-                    <h2 className="bookmarked-blogs">Bookmarked Blogs: {totalPost.length}</h2>
+                    <h2 className="bookmarked-blogs">Bookmarked Blogs: {totalPost.length-1}</h2>
                     <div className="added-blogs">
                         {/*{*/}
                         {/*    <h4>{handleBlogTitle}</h4>*/}
