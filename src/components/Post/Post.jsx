@@ -5,7 +5,7 @@ import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const readTime = (id, time) => {
     let totalTime = getTotalReadTime();
-    // add quantity
+    // add time
     const addTime = totalTime[id];
     if (!addTime) {
         totalTime[id] = parseInt(time);
@@ -15,7 +15,6 @@ const readTime = (id, time) => {
         totalTime[id] = newTime;
     }
     localStorage.setItem('read-time', JSON.stringify(totalTime));
-    // console.log(totalTime)
 }
 
 const getTotalReadTime = () => {
