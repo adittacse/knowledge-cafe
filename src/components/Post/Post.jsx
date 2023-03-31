@@ -3,6 +3,8 @@ import "./Post.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import {getTotalReadTime} from "../../utilities/LocalStorage.jsx";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const readTime = (id, time) => {
     let totalTime = getTotalReadTime();
@@ -21,6 +23,18 @@ const readTime = (id, time) => {
 const Post = (props) => {
     const {id, coverImage, authorImage, authorName, blogDate, blogReadTime, blogTitle, tags} = props.posts;
     const handleTime = props.handleTime;
+    const notify = () => {
+        toast.error("Already Bookmarked", {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    };
 
     return (
         <div className="post-container">
@@ -31,11 +45,14 @@ const Post = (props) => {
                     <h4>{authorName}</h4>
                     <p>{blogDate}</p>
                 </div>
-                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon icon={faBookmark} /></p>
+
+                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={notify} icon={faBookmark} /></p>
+                <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false}
+                                newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss
+                                draggable pauseOnHover theme="colored"></ToastContainer>
             </div>
             <h2>{blogTitle}</h2>
             <p>#{tags[0]} #{tags[1]}</p>
-            {/*<a href="#" onClick={() => {readTime(id, blogReadTime); handleTime(blogReadTime)}}>Mark as read</a>*/}
             <a href="#" onClick={() => {readTime(id, blogReadTime), handleTime()}}>Mark as read</a>
             <hr/>
         </div>
