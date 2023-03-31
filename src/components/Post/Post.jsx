@@ -6,6 +6,32 @@ import {getBookmarked, getTotalReadTime} from "../../utilities/LocalStorage.jsx"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const notify = () => {
+    toast.error("Already Bookmarked", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+};
+
+const bookmarked = () => {
+    toast.success("Post Bookmarked", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+    });
+};
+
 const readTime = (id, time) => {
     let totalTime = getTotalReadTime();
     // add time
@@ -24,9 +50,9 @@ const readTitle = (id, title) => {
     const addTitle = getTitle[id];
     if (!addTitle) {
         getTitle[id] = title;
+        bookmarked();
     } else {
-        const newTitle = addTitle + title;
-        getTitle[id] = newTitle;
+        notify();
     }
     localStorage.setItem("bookmarked-title", JSON.stringify(getTitle));
 }
@@ -34,18 +60,8 @@ const readTitle = (id, title) => {
 const Post = (props) => {
     const {id, coverImage, authorImage, authorName, blogDate, blogReadTime, blogTitle, tags} = props.posts;
     const handleTime = props.handleTime;
-    const notify = () => {
-        toast.error("Already Bookmarked", {
-            position: "top-center",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-        });
-    };
+    const handlePostCount = props.handlePostCount;
+
 
     return (
         <div className="post-container">
@@ -56,7 +72,7 @@ const Post = (props) => {
                     <h4>{authorName}</h4>
                     <p>{blogDate}</p>
                 </div>
-                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={() => {notify, readTitle(id, blogTitle)}} icon={faBookmark} /></p>
+                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={() => {readTitle(id, blogTitle), handlePostCount}} icon={faBookmark} /></p>
                 <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false}
                                 newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss
                                 draggable pauseOnHover theme="colored"></ToastContainer>
