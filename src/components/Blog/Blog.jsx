@@ -83,11 +83,13 @@ const Blog = () => {
                 }
             </div>
             <div className="sidebar">
-                <h2 className="time">Spent time on read: {readTime} min</h2>
-                <div className="bookmarked-container">
-                    <h2 className="bookmarked-blogs">Bookmarked Blogs: {totalPost.length-1}</h2>
-                    <div className="added-blogs">
-                        <Bookmarked></Bookmarked>
+                <div className="sidebar-container">
+                    <h2 className="time">Spent time on read: {readTime} min</h2>
+                    <div className="bookmarked-container">
+                        <h2 className="bookmarked-blogs">Bookmarked Blogs: {totalPost.length-1}</h2>
+                        <div className="added-blogs">
+                            <Bookmarked></Bookmarked>
+                        </div>
                     </div>
                 </div>
             </div>
