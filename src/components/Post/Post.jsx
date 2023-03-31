@@ -61,6 +61,7 @@ const Post = (props) => {
     const {id, coverImage, authorImage, authorName, blogDate, blogReadTime, blogTitle, tags} = props.posts;
     const handleTime = props.handleTime;
     const handlePostCount = props.handlePostCount;
+    // const handleBookmarkedBlogTitle = props.handleBookmarkedBlogTitle;
 
     return (
         <div className="post-container">

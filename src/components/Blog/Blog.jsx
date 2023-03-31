@@ -20,17 +20,13 @@ const Blog = () => {
         const titles = JSON.parse(localStorage.getItem("bookmarked-title")) || [];
         for (let title in titles) {
             currentTitle = titles[title];
-            // console.log(currentTitle);
         }
-        // console.log(newCurrentTitle);
-        // console.log(currentTitle);
-        // setBookmarkedTitle(newCurrentTitle);
         setBookmarkedTitle(currentTitle);
     }
 
     useEffect(() => {
         getTitle();
-    }, []);
+    }, [bookmarkedTitle]);
 
     const getTotalPost = () => {
         let totalPost = 0
@@ -68,13 +64,12 @@ const Blog = () => {
         getReadTime();
     }
 
-    const [postTitle, setPostTitle] = useState([]);
+    // const [postTitle, setPostTitle] = useState([]);
+    // const [bookmarkedTitle, setBookmarkedTitle] = useState("");
+    // const handleBookmarkedBlogTitle = () => {
+    //     getTitle();
+    // }
 
-    const handleBlogTitle = (title) => {
-        const blogTitle = [...postTitle, title];
-        setPostTitle(blogTitle);
-        return blogTitle;
-    }
 
     return (
         <div className="blog">
@@ -83,6 +78,7 @@ const Blog = () => {
                     posts.map(post => <Post key={post.id}
                                             posts={post}
                                             handlePostCount={handlePostCount}
+                                            // handleBookmarkedBlogTitle={handleBookmarkedBlogTitle}
                                             handleTime={handleTime}></Post>)
                 }
             </div>
@@ -91,13 +87,7 @@ const Blog = () => {
                 <div className="bookmarked-container">
                     <h2 className="bookmarked-blogs">Bookmarked Blogs: {totalPost.length-1}</h2>
                     <div className="added-blogs">
-                        {/*{*/}
-                        {/*    <h4>{handleBlogTitle}</h4>*/}
-                        {/*}*/}
-                        {/*{*/}
-                        {/*    // bookmarkedTitle.map(title => <Bookmarked bookmarkedTitle={title}></Bookmarked>)*/}
-                        {/*    // <Bookmarked>{bookmarkedTitle}</Bookmarked>*/}
-                        {/*}*/}
+                        <Bookmarked></Bookmarked>
                     </div>
                 </div>
             </div>
