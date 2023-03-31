@@ -1,0 +1,38 @@
+[
+    {
+      "coverImage": "https://images.unsplash.com/photo-1627323985099-5c16b5a5f5d3",
+      "authorImage": "https://images.unsplash.com/photo-1582719505107-33c3692c648f",
+      "authorName": "John Doe",
+      "blogDate": "2022-02-15",
+      "blogReadTime": "5 min read",
+      "blogTitle": "10 Tips for Writing Better Blog Posts",
+      "tags": ["blogging", "writing"]
+    },
+    {
+      "coverImage": "https://images.unsplash.com/photo-1567921173467-13d74515b68f",
+      "authorImage": "https://images.unsplash.com/photo-1620851146654-d69749c0ca4b",
+      "authorName": "Jane Smith",
+      "blogDate": "2022-03-01",
+      "blogReadTime": "7 min read",
+      "blogTitle": "The Benefits of Meditation for Productivity",
+      "tags": ["mindfulness", "productivity"]
+    },
+    {
+      "coverImage": "https://images.unsplash.com/photo-1633857524525-357ed99b5aa5",
+      "authorImage": "https://images.unsplash.com/photo-1615175572441-8cde27698d60",
+      "authorName": "Alex Johnson",
+      "blogDate": "2022-04-10",
+      "blogReadTime": "6 min read",
+      "blogTitle": "How to Build a Strong Personal Brand",
+      "tags": ["personal branding", "career"]
+    },
+    {
+      "coverImage": "https://images.unsplash.com/photo-1518364538800-6bfe10ce7857",
+      "authorImage": "https://images.unsplash.com/photo-1511795409832-80a2f2d48768",
+      "authorName": "Emily Lee",
+      "blogDate": "2022-05-20",
+      "blogReadTime": "8 min read",
+      "blogTitle": "The Top 5 Podcasts for Entrepreneurs",
+      "tags": ["podcasts", "entrepreneurship"]
+    }
+]

@@ -1,0 +1,27 @@
+.post-container {
+
+}
+
+.single-post {
+
+}
+
+.single-post .cover-image {
+    width: 845px;
+    height: 450px;
+}
+
+.about-author {
+    display: flex;
+}
+
+.author-info {
+    /*display: flex;*/
+    flex-direction: column;
+}
+
+.about-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}

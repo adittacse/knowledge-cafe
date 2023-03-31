@@ -1,0 +1,36 @@
+.post-container {
+    margin-bottom: 40px;
+}
+
+.cover-image {
+    width: 845px;
+    height: 450px;
+}
+
+.about-author {
+    border: 2px solid red;
+    /*display: flex;*/
+    align-items: center;
+    display: grid;
+    grid-template-columns: 0.7fr 5fr 1fr;
+}
+
+.about-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.author-info {
+    border: 2px solid purple;
+}
+
+.about-author .blog-read-time {
+    float: end;
+}
+
+.post-container a {
+    margin-top: 22px;
+    margin-bottom: 38px;
+}
