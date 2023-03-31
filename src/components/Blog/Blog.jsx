@@ -19,11 +19,14 @@ const Blog = () => {
                 }
             </div>
             <div>
-                <h2 className="time">Spent time on read: </h2>
+                <h2 className="time">Spent time on read: {} min</h2>
                 <div className="bookmarked-container">
                     <h2 className="bookmarked-blogs">Bookmarked Blogs: </h2>
-                    <div>
-
+                    <div className="added-blogs">
+                        <h4>normal title</h4>
+                        <h4>normal title</h4>
+                        <h4>normal title</h4>
+                        <h4>normal title</h4>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@
       "authorImage": "../src/image/person/person1.jpg",
       "authorName": "John Doe",
       "blogDate": "Mar 14 (4 Days ago)",
-      "blogReadTime": "5 min read",
+      "blogReadTime": "5",
       "blogTitle": "10 Tips for Writing Better Blog Posts",
       "tags": ["blogging", "writing"]
     },
@@ -15,7 +15,7 @@
       "authorImage": "../src/image/person/person2.jpeg",
       "authorName": "Jane Smith",
       "blogDate": "Mar 14 (4 Days ago)",
-      "blogReadTime": "7 min read",
+      "blogReadTime": "7",
       "blogTitle": "The Benefits of Meditation for Productivity",
       "tags": ["mindfulness", "productivity"]
     },
@@ -25,7 +25,7 @@
       "authorImage": "../src/image/person/person3.jpg",
       "authorName": "Alex Johnson",
       "blogDate": "Mar 14 (4 Days ago)",
-      "blogReadTime": "6 min read",
+      "blogReadTime": "6",
       "blogTitle": "How to Build a Strong Personal Brand",
       "tags": ["personal branding", "career"]
     },
@@ -35,7 +35,7 @@
       "authorImage": "../src/image/person/person4.jpeg",
       "authorName": "Emily Lee",
       "blogDate": "Mar 14 (4 Days ago)",
-      "blogReadTime": "8 min read",
+      "blogReadTime": "8",
       "blogTitle": "The Top 5 Podcasts for Entrepreneurs",
       "tags": ["podcasts", "entrepreneurship"]
     }
