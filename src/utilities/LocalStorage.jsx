@@ -7,6 +7,13 @@ const getTotalReadTime = () => {
     return time;
 }
 
-export {getTotalReadTime};
+const getBookmarked = () => {
+    let bookmarkedTitle = {};
+    const getBookMarkedTitle = localStorage.getItem("bookmarked-title");
+    if (getBookMarkedTitle) {
+        bookmarkedTitle = JSON.parse(getBookMarkedTitle);
+    }
+    return bookmarkedTitle;
+}
 
-
+export {getTotalReadTime, getBookmarked};

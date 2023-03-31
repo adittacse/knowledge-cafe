@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import "./Post.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
-import {getTotalReadTime} from "../../utilities/LocalStorage.jsx";
+import {getBookmarked, getTotalReadTime} from "../../utilities/LocalStorage.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,12 +12,23 @@ const readTime = (id, time) => {
     const addTime = totalTime[id];
     if (!addTime) {
         totalTime[id] = parseInt(time);
-    }
-    else {
+    } else {
         const newTime = addTime + parseInt(time);
         totalTime[id] = newTime;
     }
     localStorage.setItem('read-time', JSON.stringify(totalTime));
+}
+
+const readTitle = (id, title) => {
+    let getTitle = getBookmarked();
+    const addTitle = getTitle[id];
+    if (!addTitle) {
+        getTitle[id] = title;
+    } else {
+        const newTitle = addTitle + title;
+        getTitle[id] = newTitle;
+    }
+    localStorage.setItem("bookmarked-title", JSON.stringify(getTitle));
 }
 
 const Post = (props) => {
@@ -45,7 +56,7 @@ const Post = (props) => {
                     <h4>{authorName}</h4>
                     <p>{blogDate}</p>
                 </div>
-                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={notify} icon={faBookmark} /></p>
+                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={() => {notify, readTitle(id, blogTitle)}} icon={faBookmark} /></p>
                 <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false}
                                 newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss
                                 draggable pauseOnHover theme="colored"></ToastContainer>
