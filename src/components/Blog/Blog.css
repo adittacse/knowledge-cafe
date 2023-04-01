@@ -10,6 +10,12 @@
     padding-right: 220px;
 }
 
+.questions-and-answers {
+    padding-left: 220px;
+    padding-right: 220px;
+    align-items: center;
+}
+
 .questions-and-answers h2 {
     text-align: center;
 }

@@ -26,6 +26,7 @@
 }
 
 .author-info h4 {
+    color: black;
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
@@ -40,7 +41,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    color: rgba(17, 17, 17, 0.6);
+    /*color: rgba(17, 17, 17, 0.6);*/
 }
 
 .about-author .blog-read-time {
@@ -49,7 +50,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    color: rgba(17, 17, 17, 0.6);
+    /*color: rgba(17, 17, 17, 0.6);*/
 }
 
 .blog-title {

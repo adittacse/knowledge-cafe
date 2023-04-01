@@ -73,7 +73,6 @@ const Blog = () => {
                         posts.map(post => <Post key={post.id}
                                                 posts={post}
                                                 handlePostCount={handlePostCount}
-                            // handleBookmarkedBlogTitle={handleBookmarkedBlogTitle}
                                                 handleTime={handleTime}></Post>)
                     }
                 </div>
