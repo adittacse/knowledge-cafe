@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import "./Blog.css";
 import Post from "../Post/Post.jsx";
 import Bookmarked from "../Bookmarked/Bookmarked.jsx";
+import {deleteShoppingCart} from "../../utilities/LocalStorage.jsx";
 
 const Blog = () => {
     const [bookmarkedTitle, setBookmarkedTitle] = useState("");
@@ -83,6 +84,9 @@ const Blog = () => {
                         <div className="added-blogs">
                             <Bookmarked></Bookmarked>
                         </div>
+                    </div>
+                    <div className="btn-container">
+                        <button className="btn-delete-data" onClick={deleteShoppingCart}>Delete Data From Local Storage</button>
                     </div>
                 </div>
             </div>

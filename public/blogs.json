@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "coverImage": "../src/image/blog/blog-1.png",
+      "coverImage": "https://images.unsplash.com/photo-1521185496955-15097b20c5fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2100&q=80",
       "authorImage": "../src/image/person/person1.jpg",
       "authorName": "John Doe",
       "blogDate": "Mar 14 (4 Days ago)",
@@ -11,7 +11,7 @@
     },
     {
       "id": "2",
-      "coverImage": "../src/image/blog/blog-2.png",
+      "coverImage": "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2412&q=80",
       "authorImage": "../src/image/person/person2.jpeg",
       "authorName": "Jane Smith",
       "blogDate": "Mar 14 (4 Days ago)",
@@ -21,7 +21,7 @@
     },
     {
       "id": "3",
-      "coverImage": "../src/image/blog/blog-3.jpg",
+      "coverImage": "https://plus.unsplash.com/premium_photo-1678565869434-c81195861939?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
       "authorImage": "../src/image/person/person3.jpg",
       "authorName": "Alex Johnson",
       "blogDate": "Mar 14 (4 Days ago)",
@@ -31,7 +31,7 @@
     },
     {
       "id": "4",
-      "coverImage": "../src/image/blog/blog-4.jpg",
+      "coverImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
       "authorImage": "../src/image/person/person4.jpeg",
       "authorName": "Emily Lee",
       "blogDate": "Mar 14 (4 Days ago)",

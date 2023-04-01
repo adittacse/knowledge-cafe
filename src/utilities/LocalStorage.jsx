@@ -41,4 +41,10 @@ const getBookmarkedTitle = () => {
     return bookmarkedTitles;
 }
 
-export {getTotalReadTime, getBookmarked, getBookmarkedId, getBookmarkedTitle};
+const deleteShoppingCart = () => {
+    localStorage.removeItem("read-time");
+    localStorage.removeItem("bookmarked-title");
+    window.location = "./";
+}
+
+export {getTotalReadTime, getBookmarked, getBookmarkedId, getBookmarkedTitle, deleteShoppingCart};
