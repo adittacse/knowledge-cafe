@@ -66,7 +66,7 @@ const Blog = () => {
     }
 
     return (
-        <div>
+        <div className="blog-container">
             <div className="blog">
                 <div className="single-blog">
                     {

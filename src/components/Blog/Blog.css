@@ -6,21 +6,6 @@
     padding-right: 220px;
 }
 
-@media (max-width: 576px) {
-    .blog {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .single-blog {
-        /*padding-right: 20px;*/
-        /*width: 70% !important;*/
-        /*margin: 0 auto;*/
-    }
-}
-
 .questions-and-answers h2 {
     text-align: center;
 }
@@ -90,15 +75,35 @@
 }
 
 .questions-and-answers {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     padding: 50px 220px 100px;
+    /*margin-left: 220px;*/
+    /*margin-right: 220px;*/
 }
 
 @media (max-width: 576px) {
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 0;
+        padding-right: 0;
+    }
     .sidebar {
         padding-left: 20px;
         padding-right: 20px;
     }
     .questions-and-answers {
-        /*padding-left: 20px;*/
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        margin: 0 auto;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
