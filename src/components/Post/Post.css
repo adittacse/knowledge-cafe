@@ -7,24 +7,6 @@
     height: 450px;
 }
 
-@media (max-width: 576px) {
-    .cover-image {
-        width: 95%;
-        /*display: block;*/
-        padding-left: 20px;
-        marign: 0 auto;
-        justify-content: center;
-        align-content: center;
-    }
-    .about-author {
-        padding-left: 20px;
-        padding-right: 30px;
-    }
-    .blog-title, .tags, a {
-        padding-left: 20px;
-    }
-}
-
 .about-author {
     /*display: flex;*/
     align-items: center;
@@ -81,4 +63,22 @@
 .post-container .horizontal-line {
     margin-top: 22px;
     margin-bottom: 38px;
+}
+
+@media (max-width: 576px) {
+    .cover-image {
+        width: 95%;
+        /*display: block;*/
+        padding-left: 20px;
+        marign: 0 auto;
+        justify-content: center;
+        align-content: center;
+    }
+    .about-author {
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+    .blog-title, .tags, a {
+        padding-left: 20px;
+    }
 }
