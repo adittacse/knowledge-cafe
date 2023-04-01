@@ -10,6 +10,14 @@
 
 }
 
+.questions-and-answers h2 {
+    text-align: center;
+}
+
+.questions-and-answers p {
+    text-align: justify;
+}
+
 .single-blog {
     width: 845px;
     padding-top: 32px;
@@ -68,4 +76,8 @@
 .btn-delete-data {
     background-color: orange;
     border: 0;
+}
+
+.questions-and-answers {
+    padding: 50px 220px 100px;
 }
