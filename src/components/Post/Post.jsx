@@ -79,8 +79,8 @@ const Post = (props) => {
                                 newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss
                                 draggable pauseOnHover theme="colored"></ToastContainer>
             </div>
-            <h2 className="blog-tile">{blogTitle}</h2>
-            <p>#{tags[0]} #{tags[1]}</p>
+            <h2 className="blog-title">{blogTitle}</h2>
+            <p className="tags">#{tags[0]} #{tags[1]}</p>
             <a href="#" onClick={() => {readTime(id, blogReadTime), handleTime()}}>Mark as read</a>
             <hr className="horizontal-line"/>
         </div>

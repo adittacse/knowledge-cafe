@@ -6,8 +6,19 @@
     padding-right: 220px;
 }
 
-@media (min-width: 768px) {
-
+@media (max-width: 576px) {
+    .blog {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .single-blog {
+        /*padding-right: 20px;*/
+        /*width: 70% !important;*/
+        /*margin: 0 auto;*/
+    }
 }
 
 .questions-and-answers h2 {

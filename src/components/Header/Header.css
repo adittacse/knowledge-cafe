@@ -4,6 +4,12 @@
     padding-right: 220px;
 }
 
+@media (max-width: 576px) {
+    .header {
+        /*padding-left: 50px;*/
+    }
+}
+
 .header-data {
     display: flex;
     justify-content: space-between;
