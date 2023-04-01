@@ -6,7 +6,8 @@
 
 @media (max-width: 576px) {
     .header {
-        /*padding-left: 50px;*/
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
