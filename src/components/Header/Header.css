@@ -4,13 +4,6 @@
     padding-right: 220px;
 }
 
-@media (max-width: 576px) {
-    .header {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-
 .header-data {
     display: flex;
     justify-content: space-between;
@@ -33,4 +26,11 @@
 hr {
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 576px) {
+    .header {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
