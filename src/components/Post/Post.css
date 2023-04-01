@@ -26,7 +26,8 @@
 }
 
 .author-info h4 {
-    color: black;
+    background-color: transparent;
+    /*color: rgba(17, 17, 17, 0.6);*/
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
@@ -35,13 +36,19 @@
     padding: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+    .author-info h4, .author-info p .blog-title {
+        color: white;
+        /*background: black;*/
+    }
+}
+
 .author-info p {
     margin-top: 0;
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    /*color: rgba(17, 17, 17, 0.6);*/
 }
 
 .about-author .blog-read-time {
@@ -50,7 +57,6 @@
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
-    /*color: rgba(17, 17, 17, 0.6);*/
 }
 
 .blog-title {
@@ -58,7 +64,6 @@
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    /*color: #111111;*/
 }
 
 .post-container .horizontal-line {
