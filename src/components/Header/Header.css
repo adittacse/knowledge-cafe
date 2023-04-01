@@ -17,7 +17,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    color: #111111;
+    /*color: #111111;*/
 }
 .header-data img {
     width: 60px;
@@ -26,7 +26,7 @@
 }
 
 hr {
-    width: 77%;
+    width: 74%;
     margin: 0 auto;
     /*padding-left: 220px;*/
 }
