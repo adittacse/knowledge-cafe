@@ -79,7 +79,7 @@ const Blog = () => {
                 <div className="sidebar-container">
                     <h2 className="time">Spent time on read: {readTime} min</h2>
                     <div className="bookmarked-container">
-                        <h2 className="bookmarked-blogs">Bookmarked Blogs: {totalPost.length-1}</h2>
+                        <h2 className="bookmarked-blogs">Bookmarked Blogs: {totalPost.length-1 ? totalPost.length-1 : 0}</h2>
                         <div className="added-blogs">
                             <Bookmarked></Bookmarked>
                         </div>
