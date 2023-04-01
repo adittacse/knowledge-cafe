@@ -64,13 +64,6 @@ const Blog = () => {
         getReadTime();
     }
 
-    // const [postTitle, setPostTitle] = useState([]);
-    // const [bookmarkedTitle, setBookmarkedTitle] = useState("");
-    // const handleBookmarkedBlogTitle = () => {
-    //     getTitle();
-    // }
-
-
     return (
         <div className="blog">
             <div className="single-blog">

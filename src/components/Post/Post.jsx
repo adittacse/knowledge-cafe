@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import "./Post.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
-import {getBookmarked, getTotalReadTime} from "../../utilities/LocalStorage.jsx";
+import {getBookmarked, getBookmarkedId, getTotalReadTime} from "../../utilities/LocalStorage.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -61,7 +61,7 @@ const Post = (props) => {
     const {id, coverImage, authorImage, authorName, blogDate, blogReadTime, blogTitle, tags} = props.posts;
     const handleTime = props.handleTime;
     const handlePostCount = props.handlePostCount;
-    // const handleBookmarkedBlogTitle = props.handleBookmarkedBlogTitle;
+    const bookmarkedId = getBookmarkedId();
 
     return (
         <div className="post-container">
@@ -72,7 +72,9 @@ const Post = (props) => {
                     <h4>{authorName}</h4>
                     <p>{blogDate}</p>
                 </div>
-                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon onClick={() => {readTitle(id, blogTitle), handlePostCount()}} icon={faBookmark} /></p>
+
+                <p className="blog-read-time">{blogReadTime} min read <FontAwesomeIcon color={ (bookmarkedId.includes(id) ) ? 'orange' : 'black' }
+                                                                                       onClick={() => {readTitle(id, blogTitle), handlePostCount()}} icon={faBookmark} /></p>
                 <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false}
                                 newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss
                                 draggable pauseOnHover theme="colored"></ToastContainer>
